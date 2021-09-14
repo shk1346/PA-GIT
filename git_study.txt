@@ -33,6 +33,12 @@ GIT 사용
 			    새로운 commit을 생성해 기존의 commit 내역에 추가한다
 			   → conflict가 발생할 수 있음
 
+7. 원격 리포지토리 추가 및 push/pull 하기
+	git remote add origin <repository 주소>
+	git pull --allow-unrelated-histories origin main : 원격 리포지토리에서 처음 pull 할때만
+	git push -u origin main
+		* -u : push 할 기본 원격 저장소와 브랜치를 기억
+		       앞으로는 push할 때 원격 저장소와 브랜치를 작성할 필요가 없다.
 				
 	
 
