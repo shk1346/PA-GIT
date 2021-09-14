@@ -17,3 +17,16 @@ GIT 사용
 	git add <파일명> : 파일을 staging area에 추가
 	git commit
 		i : 입력, esc : 입력모드에서 나가기, wq : 저장 종료
+
+5. 변경 내역을 되돌리기
+	git restore<파일명> : 마지막 commit 지점으로 파일을 rollback
+	git restore --staged <파일명> : staging area에 등록된 파일을 취소 
+			   staged 파일은 unstaged 상태로 변경
+
+6. 파일을 원하는 commit 지점으로 되돌리기
+	git reset --soft <commit> : commit 내역을 되돌리고 commit만 취소, add 이후의 상태로 돌림
+				(staging area에는 파일이 그대로 남아있다.)
+	git reset --mixed <commit> : commit 내역을 되돌리고 staging 까지 취소, add 이전의 상태로 돌림 ~여기까진 file에 영향이 없다.
+	git reset --hard <commit> : commit 내역을 되돌리고 commit 지점으로 rollback, file에 영향 있다.
+	
+
