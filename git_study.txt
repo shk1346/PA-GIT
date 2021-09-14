@@ -28,5 +28,11 @@ GIT 사용
 				(staging area에는 파일이 그대로 남아있다.)
 	git reset --mixed <commit> : commit 내역을 되돌리고 staging 까지 취소, add 이전의 상태로 돌림 ~여기까진 file에 영향이 없다.
 	git reset --hard <commit> : commit 내역을 되돌리고 commit 지점으로 rollback, file에 영향 있다.
+
+	git revert <commit> : 지정된 commit으로 인해 발생한 변경을 되돌린다.
+			    새로운 commit을 생성해 기존의 commit 내역에 추가한다
+			   → conflict가 발생할 수 있음
+
+				
 	
 
